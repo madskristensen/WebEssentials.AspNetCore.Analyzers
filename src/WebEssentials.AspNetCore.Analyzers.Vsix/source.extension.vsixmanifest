@@ -4,6 +4,11 @@
         <Identity Id="c0c952c3-c928-4fe0-b51b-00f641f1818f" Version="1.0" Language="en-US" Publisher="Mads Kristensen"/>
         <DisplayName>WebEssentials.AspNetCore.Analyzers</DisplayName>
         <Description xml:space="preserve">A collection of analyzers for ASP.NET Core</Description>
+        <MoreInfo>https://github.com/madskristensen/WebEssentials.AspNetCore.Analyzers</MoreInfo>
+        <License>Resources\LICENSE</License>
+        <Icon>Resources\logo.png</Icon>
+        <PreviewImage>Resources\logo.png</PreviewImage>
+        <Tags>asp.net, analyzers, core</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Version="[14.0,]" Id="Microsoft.VisualStudio.Pro" />
