@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27031.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEssentials.AspNetCore.Analyzers", "src\WebEssentials.AspNetCore.Analyzers\WebEssentials.AspNetCore.Analyzers.csproj", "{1E954B26-98FB-461D-9730-09E34E200133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEssentials.AspNetCore.Analyzers.Vsix", "src\WebEssentials.AspNetCore.Analyzers.Vsix\WebEssentials.AspNetCore.Analyzers.Vsix.csproj", "{1D2281D7-ED03-4B0C-A48F-DD6B16DFBF80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEssentials.AspNetCore.Analyzers.VS", "src\WebEssentials.AspNetCore.Analyzers.VS\WebEssentials.AspNetCore.Analyzers.VS.csproj", "{1D2281D7-ED03-4B0C-A48F-DD6B16DFBF80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33FF8EFB-8B8B-410E-A918-A4ACF5E8CFC2}"
 	ProjectSection(SolutionItems) = preProject
