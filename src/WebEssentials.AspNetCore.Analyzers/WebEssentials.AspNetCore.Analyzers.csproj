@@ -1,12 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <TargetFramework>netstandard1.3</TargetFramework>
     <RootNamespace>WebEssentials.AspNetCore.Analyzers</RootNamespace>
     <DebugType>full</DebugType>
     <NuspecFile>Diagnostic.nuspec</NuspecFile>
-    <NuspecBasePath>bin/$(Configuration)/netstandard2.0/</NuspecBasePath>
+    <NuspecBasePath>bin/$(Configuration)/netstandard1.3/</NuspecBasePath>
   </PropertyGroup>
 
   <ItemGroup>
