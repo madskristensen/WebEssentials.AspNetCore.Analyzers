@@ -8,6 +8,10 @@ namespace WebEssentials.AspNetCore.Analyzers
             "Specify at least one source files. Source files can not be null or empty.",
             "Specify at least one source files. Source files can not be null or empty.");
 
+        public static DiagnosticDescriptor AsyncVoidPageHandler => Generate(1001,
+            "A page handler should never be async void.",
+            "A page handler should never be async void.");
+
         private static DiagnosticDescriptor Generate(int id, string title, string messageFormat, DiagnosticSeverity severity = DiagnosticSeverity.Warning)
         {
             return new DiagnosticDescriptor(
