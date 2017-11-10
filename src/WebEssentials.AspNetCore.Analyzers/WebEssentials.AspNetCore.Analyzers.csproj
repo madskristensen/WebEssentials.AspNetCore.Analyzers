@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>WebEssentials.AspNetCore.Analyzers</RootNamespace>
     <DebugType>full</DebugType>
     <NuspecFile>Diagnostic.nuspec</NuspecFile>
