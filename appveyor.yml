@@ -9,15 +9,14 @@ before_build:
   - ps: Vsix-IncrementNuspecVersion .\**\*.nuspec
 
 build_script:
-  - dotnet build src\WebEssentials.AspNetCore.Analyzers\WebEssentials.AspNetCore.Analyzers.csproj -v quiet
-  - nuget restore src\WebEssentials.AspNetCore.Analyzers.Vsix\WebEssentials.AspNetCore.Analyzers.Vsix.csproj -Verbosity quiet
-  - msbuild src\WebEssentials.AspNetCore.Analyzers.Vsix\WebEssentials.AspNetCore.Analyzers.Vsix.csproj /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
+  - nuget restore -Verbosity quiet
+  - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
 after_test:
   - ps: Vsix-PushArtifacts | Vsix-PublishToGallery
 
 artifacts:
-  - path: src\WebEssentials.AspNetCore.Analyzers\bin\**\*.nupkg
+  - path: src\WebEssentials.AspNetCore.Analyzers\bin\Release\*.nupkg
     name: NuGet package
 
 deploy:
