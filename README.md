@@ -5,8 +5,8 @@
 
 ## Analyzers in this package
 
-### Razor Page handler async void
+### WE1000 - Razor Page handler async void
 Page handlers in Razor Pages model classes must not be async void.
 
-### Middleware ordering
+### WE1001 - Middleware ordering
 Ensures that known middleware that is sensitive to ordering is correctly ordered.

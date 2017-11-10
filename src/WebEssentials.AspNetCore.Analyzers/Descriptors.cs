@@ -15,7 +15,7 @@ namespace WebEssentials.AspNetCore.Analyzers
         private static DiagnosticDescriptor Generate(int id, string title, string messageFormat, DiagnosticSeverity severity = DiagnosticSeverity.Warning)
         {
             return new DiagnosticDescriptor(
-               id: $"WO{id}",
+               id: $"WE{id}",
                title: title,
                messageFormat: messageFormat,
                category: "Usage",
