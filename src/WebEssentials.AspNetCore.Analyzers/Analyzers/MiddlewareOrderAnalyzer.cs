@@ -1,9 +1,9 @@
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using System.Collections.Generic;
-using System.Collections.Immutable;
 
 namespace WebEssentials.AspNetCore.Analyzers
 {
@@ -52,7 +52,7 @@ namespace WebEssentials.AspNetCore.Analyzers
 
         private void CheckForOrderingErrors(SyntaxNodeAnalysisContext syntaxContext, InvocationExpressionSyntax invocation, IMethodSymbol methodSymbol)
         {
-            if (!_rules.TryGetValue(methodSymbol.Name, out var others))
+            if (!_rules.TryGetValue(methodSymbol.Name, out IEnumerable<string> others))
             {
                 return;
             }
@@ -63,10 +63,9 @@ namespace WebEssentials.AspNetCore.Analyzers
                     continue;
 
                 string parent = methodSymbol.ReceiverType.Name;
-                var error = _descriptor.Clone($"The call to {parent}.{methodSymbol.Name}() must be before {parent}.{other}()");
+                DiagnosticDescriptor error = _descriptor.Clone($"The call to {parent}.{methodSymbol.Name}() must be before {parent}.{other}()");
 
                 syntaxContext.ReportDiagnostic(Diagnostic.Create(error, invocation.GetLocation()));
-
             }
         }
     }
